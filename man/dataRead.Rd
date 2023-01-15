@@ -36,7 +36,19 @@ A validated dataframe in long format
 Read in data and validate before analysis is conducted
 }
 \examples{
-df <- testData
-dataRead(df, timing="hour", streams=c("rep1", "rep2", "rep3", "rep4", "rep5", "rep6", "rep7", "rep8", "rep9", "rep10"), type="wide", median0 = .8)
+set.seed(795014178)
+streams <- 20
+time <- 60
+samples <- 15
+mu0 <- 3
+delta <- 3
+library(dplyr)
+turnstiles <- tibble(
+  turnstile = rep(rep(1:streams,each=samples),time),
+  hour = rep(1:time,each=streams * samples),
+  sample = rep(rep(1:samples), times = streams * time),
+  waitTime = rexp(streams * time * samples,rate=.22985)
+  ) \%>\% mutate(waitTime = if_else(hour == 38, waitTime * 2,waitTime))
+dataRead(turnstiles, timing="hour", streams="sample", VoI="waitTime", type="long", median0 = 3)
 
 }

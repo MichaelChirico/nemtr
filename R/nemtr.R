@@ -21,7 +21,7 @@
 #'
 #' @examples
 #' load(system.file("data", "testData.rda", package = "nemtr", mustWork = TRUE))
-#' nemtr(testData, timing="hour", streams=c("rep1", "rep2", "rep3", "rep4", "rep5", "rep6", "rep7", "rep8", "rep9", "rep10"), type="wide", median0 = .8)
+#' nemtr(testData, timing="hour", streams=c(paste0('rep', 1:10)), type="wide", median0 = .8)
 #'
 
 nemtr <- function(dataFrame, timing, streams, VoI = NA, type="long", median0 = NA, delta = 3){
