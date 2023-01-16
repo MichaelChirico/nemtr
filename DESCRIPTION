@@ -4,7 +4,7 @@ Version: 0.0.1.0
 Authors@R: 
     c(person("Caleb", "Greski", , "caleb.p@greski.com", role = c("aut", "cre")),
     person("Austin", "Brown", , "abrow708@kennesaw.edu", role = c("aut")))
-Description: nemtr calculates a cumulative summation nonparametric extended 
+Description: Function to calculate a cumulative summation nonparametric extended 
     median test based on the work of Brown & Schaffer (2020) <DOI: 10.1080/03610926.2020.1738492>. 
     It then generates a control chart to assess processes and determine if any streams are out of control.
 License: MIT + file LICENSE 

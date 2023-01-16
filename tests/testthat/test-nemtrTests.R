@@ -7,7 +7,7 @@
 load(test_path("testdata", "testData.rda"))
 load(test_path("testdata", "testDataLong.rda"))
 load(test_path("testdata", "expOutput.rda"))
-load(test_path("testdata", "nemt_plot.rda "))
+load(test_path("testdata", "nemt_plot.rda"))
 
 df <- testData
 dfL <- testDataLong
