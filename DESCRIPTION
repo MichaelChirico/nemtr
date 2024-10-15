@@ -16,6 +16,6 @@ BugReports: https://github.com/calebgreski/nemtr/issues
 Imports: magrittr, tidyr, dplyr, ggplot2
 Suggests: testthat
 Depends: 
-    R (>= 3.50)
+    R (>= 3.5.0)
 LazyData: true
 Config/testthat/edition: 3
